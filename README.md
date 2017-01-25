@@ -1,4 +1,4 @@
-# CSnackBar
+# CSnackBar[ ![Download](https://api.bintray.com/packages/chathurahettiarachchi/maven/CSnackBar/images/download.svg) ](https://bintray.com/chathurahettiarachchi/maven/CSnackBar/_latestVersion)
 This is a wrapper for android Snackbar. Which giving support to change Snackbar color, duration, message or even it's content view with a custom view.
 
 ![csnackbar](https://cloud.githubusercontent.com/assets/13764097/22288484/0942e32e-e31d-11e6-9630-2132379127f7.jpg)
