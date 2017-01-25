@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="76dp">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_account_balance_36dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/imageView" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/imageView"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_toEndOf="@+id/imageView">
+
+        <TextView
+            android:text="This is title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:textColor="#fff"
+            android:id="@+id/textView2" />
+
+        <TextView
+            android:text="Sample meaage here..."
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView2"
+            android:textColor="#fff"
+            android:id="@+id/textView3" />
+
+    </RelativeLayout>
+</RelativeLayout>
