@@ -3,7 +3,7 @@ This is a wrapper for android Snackbar. Which giving support to change Snackbar 
 
 ![csnackbar](https://cloud.githubusercontent.com/assets/13764097/22288484/0942e32e-e31d-11e6-9630-2132379127f7.jpg)
 
-This library contain following two functions,
+This library contain following functions,
 
 * Snackbar - alert type
 * Snackbar - set custom duration
