@@ -13,7 +13,7 @@ ext {
     siteUrl = 'https://github.com/ChathuraHettiarachchi/CSnackBar'
     gitUrl = 'https://github.com/ChathuraHettiarachchi/CSnackBar.git'
 
-    libraryVersion = '1.0.0'
+    libraryVersion = '1.2.0'
 
     developerId = 'ChathuraHettiarachchi'
     developerName = 'Chathura Hettiarachchi'
@@ -50,9 +50,9 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile 'com.android.support:appcompat-v7:25.1.0'
-    compile 'com.android.support:support-v4:25.1.0'
-    compile 'com.android.support:design:25.1.0'
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:support-v4:25.3.1'
+    compile 'com.android.support:design:25.3.1'
     testCompile 'junit:junit:4.12'
 }
 

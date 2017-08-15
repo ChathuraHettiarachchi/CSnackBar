@@ -55,8 +55,8 @@ public class Snackbar {
         return singleton;
     }
 
-    public static Snackbar message(String displayingMessage) {
-        snackMessage = displayingMessage;
+    public static Snackbar message(CharSequence displayingMessage) {
+        snackMessage = displayingMessage.toString();
         return singleton;
     }
 
@@ -107,7 +107,7 @@ public class Snackbar {
     }
 
     public static void show() {
-        if(isCustomView){
+        if (isCustomView) {
             snackbar.setDuration(snackDuration);
             snackbar.show();
         } else {
