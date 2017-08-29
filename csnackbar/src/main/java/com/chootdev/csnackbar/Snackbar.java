@@ -85,6 +85,7 @@ public class Snackbar {
 
         TextView textView = (TextView) snackLayout.findViewById(android.support.design.R.id.snackbar_text);
         textView.setVisibility(View.INVISIBLE);
+        textView.setMaxLines(10);
 
         snackLayout.addView(view, 0, params);
         return singleton;
