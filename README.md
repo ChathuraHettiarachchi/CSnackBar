@@ -24,7 +24,7 @@ repositories {
 
 dependencies {
     ...
-    compile 'com.chootdev:csnackbar:1.1.0'
+    compile 'com.chootdev:csnackbar:1.2.0'
 }
 ```
 
