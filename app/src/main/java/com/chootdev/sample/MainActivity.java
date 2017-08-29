@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.button:
                 Snackbar.with(this,null)
                         .type(Type.SUCCESS)
-                        .message("Profile updated successfully!")
+                        .message("Profile updated successfully!\nProfile updated successfully!\nProfile updated successfully!\nProfile updated successfully!")
                         .duration(Duration.SHORT)
                         .show();
                 break;
