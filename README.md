@@ -24,7 +24,7 @@ repositories {
 
 dependencies {
     ...
-    compile 'com.chootdev:csnackbar:1.2.0'
+    compile 'com.chootdev:csnackbar:1.3.1'
 }
 ```
 
@@ -112,6 +112,8 @@ Output Generated
 
 Changelog
 ---------
+* **1.3.1**
+    * Add max lines upto 10
 * **1.1.0**
     * Fixed snackbar long value
 * **1.0.0**
