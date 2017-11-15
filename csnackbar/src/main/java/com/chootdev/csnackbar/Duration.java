@@ -14,11 +14,9 @@ public enum Duration {
             case SHORT:
                 return Snackbar.LENGTH_SHORT;
             case LONG:
-                return Snackbar.LENGTH_SHORT;
+                return Snackbar.LENGTH_LONG;
             case INFINITE:
                 return Snackbar.LENGTH_INDEFINITE;
-            case CUSTOM:
-                return Snackbar.LENGTH_SHORT;
         }
 
         return Snackbar.LENGTH_SHORT;
