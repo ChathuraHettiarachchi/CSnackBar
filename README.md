@@ -24,7 +24,7 @@ repositories {
 
 dependencies {
     ...
-    compile 'com.chootdev:csnackbar:1.3.1'
+    compile 'com.chootdev:csnackbar:1.3.2'
 }
 ```
 
@@ -35,7 +35,7 @@ Maven
 <dependency>
   <groupId>com.chootdev</groupId>
   <artifactId>csnackbar</artifactId>
-  <version>1.0.0</version>
+  <version>1.3.2</version>
   <type>pom</type>
 </dependency>
 ```
@@ -112,6 +112,8 @@ Output Generated
 
 Changelog
 ---------
+* **1.3.2**
+    * Fixed issue with Duration.Long (Thanks [Manuel González Villegas](https://github.com/manuelgon47))
 * **1.3.1**
     * Add max lines upto 10
 * **1.1.0**
