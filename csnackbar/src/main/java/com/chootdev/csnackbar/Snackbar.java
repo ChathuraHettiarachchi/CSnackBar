@@ -64,8 +64,8 @@ public class Snackbar {
         return singleton;
     }
 
-    public static Snackbar message(String displayingMessage) {
-        snackMessage = displayingMessage;
+    public static Snackbar message(CharSequence displayingMessage) {
+        snackMessage = displayingMessage.toString();
         return singleton;
     }
 
@@ -157,7 +157,6 @@ public class Snackbar {
     }
 
     public static void show() {
-
         if (isCustomView) {
             snackbar.setDuration(snackDuration);
             snackbar.show();
@@ -172,6 +171,10 @@ public class Snackbar {
             setTextAlignment(snackbar);
 
             setColor(colorCode);
+
+            View snackbarView = snackbar.getView();
+            TextView textView = (TextView) snackbarView.findViewById(android.support.design.R.id.snackbar_text);
+            textView.setMaxLines(10);
         }
         snackbar.show();
     }
