@@ -43,4 +43,38 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/button6" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:text="Fill - Text Center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/button7"
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:lines="2"/>
+
+        <Button
+            android:text="Fill - Text Left"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/button8"
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:lines="2"/>
+
+        <Button
+            android:text="Fill - Text Right"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/button9"
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:lines="2"/>
+    </LinearLayout>
+
 </LinearLayout>

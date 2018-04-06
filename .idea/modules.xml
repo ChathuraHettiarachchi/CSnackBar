@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Git-CSnackbar.iml" filepath="$PROJECT_DIR$/Git-CSnackbar.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CSnackBar.iml" filepath="$PROJECT_DIR$/CSnackBar.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/csnackbar/csnackbar.iml" filepath="$PROJECT_DIR$/csnackbar/csnackbar.iml" />
     </modules>

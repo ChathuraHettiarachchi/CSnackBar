@@ -5,13 +5,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
+import com.chootdev.csnackbar.Align;
 import com.chootdev.csnackbar.Duration;
 import com.chootdev.csnackbar.Snackbar;
 import com.chootdev.csnackbar.Type;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    Button button1,button2,button3,button4,button5,button6;
+    Button button1,button2,button3,button4,button5,button6, button7, button8, button9;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +25,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         button4 = (Button)findViewById(R.id.button4);
         button5 = (Button)findViewById(R.id.button5);
         button6 = (Button)findViewById(R.id.button6);
+        button7 = (Button)findViewById(R.id.button7);
+        button8 = (Button)findViewById(R.id.button8);
+        button9 = (Button)findViewById(R.id.button9);
 
         button1.setOnClickListener(this);
         button2.setOnClickListener(this);
@@ -31,6 +35,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         button4.setOnClickListener(this);
         button5.setOnClickListener(this);
         button6.setOnClickListener(this);
+        button7.setOnClickListener(this);
+        button8.setOnClickListener(this);
+        button9.setOnClickListener(this);
     }
 
     @Override
@@ -77,6 +84,33 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Snackbar.with(this,null)
                         .type(Type.UPDATE)
                         .contentView(v, 76)
+                        .duration(Duration.SHORT)
+                        .show();
+                break;
+            case R.id.button7:
+                Snackbar.with(this,null)
+                        .type(Type.SUCCESS)
+                        .message("Tab screen FILL-PARENT Text Center")
+                        .fillParent(true)
+                        .textAlign(Align.CENTER)
+                        .duration(Duration.SHORT)
+                        .show();
+                break;
+            case R.id.button8:
+                Snackbar.with(this,null)
+                        .type(Type.SUCCESS)
+                        .message("Tab screen FILL-PARENT Text Left")
+                        .fillParent(true)
+                        .textAlign(Align.LEFT)
+                        .duration(Duration.SHORT)
+                        .show();
+                break;
+            case R.id.button9:
+                Snackbar.with(this,null)
+                        .type(Type.SUCCESS)
+                        .message("Tab screen FILL-PARENT Text Right")
+                        .fillParent(true)
+                        .textAlign(Align.RIGHT)
                         .duration(Duration.SHORT)
                         .show();
                 break;

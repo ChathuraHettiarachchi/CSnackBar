@@ -2,6 +2,9 @@ package com.chootdev.csnackbar;
 
 import android.app.Activity;
 import android.content.Context;
+import android.os.Build;
+import android.support.design.widget.AppBarLayout;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.TextView;
 
@@ -20,7 +23,10 @@ public class Snackbar {
     private static String snackMessage = "Hi there !";
     private static int snackDuration = Duration.getDuration(Duration.SHORT);
     private static View view;
+
     private static boolean isCustomView;
+    private static boolean isFillParent;
+    private static Align textAlign;
 
     public static Snackbar with(Context context, View fab) {
         snackContext = context.getApplicationContext();
@@ -39,6 +45,9 @@ public class Snackbar {
         }
 
         isCustomView = false;
+        isFillParent = false;
+        textAlign = Align.LEFT;
+
         return singleton;
     }
 
@@ -90,6 +99,16 @@ public class Snackbar {
         return singleton;
     }
 
+    public static Snackbar fillParent(boolean fillParent) {
+        isFillParent = fillParent;
+        return singleton;
+    }
+
+    public static Snackbar textAlign(Align align) {
+        textAlign = align;
+        return singleton;
+    }
+
     private static View getSnackBarLayout() {
         if (snackbar != null) {
             return snackbar.getView();
@@ -106,14 +125,51 @@ public class Snackbar {
         return singleton;
     }
 
+    private static void setTextAlignment(android.support.design.widget.Snackbar snackbar) {
+        TextView textView = (TextView) snackbar.getView().findViewById(android.support.design.R.id.snackbar_text);
+
+        switch (textAlign) {
+            case CENTER:
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M)
+                    textView.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+                else
+                    textView.setGravity(Gravity.CENTER_HORIZONTAL);
+                break;
+            case RIGHT:
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M)
+                    textView.setTextAlignment(View.TEXT_ALIGNMENT_VIEW_END);
+                else
+                    textView.setGravity(Gravity.RIGHT);
+                break;
+            case LEFT:
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M)
+                    textView.setTextAlignment(View.TEXT_ALIGNMENT_VIEW_START);
+                else
+                    textView.setGravity(Gravity.LEFT);
+                break;
+            default:
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M)
+                    textView.setTextAlignment(View.TEXT_ALIGNMENT_VIEW_START);
+                else
+                    textView.setGravity(Gravity.LEFT);
+                break;
+        }
+    }
+
     public static void show() {
-        if(isCustomView){
+
+        if (isCustomView) {
             snackbar.setDuration(snackDuration);
             snackbar.show();
         } else {
             snackbar = android.support.design.widget.Snackbar
                     .make(view, snackMessage, snackDuration)
                     .setDuration(snackDuration);
+
+            if (isFillParent)
+                snackbar.getView().getLayoutParams().width = AppBarLayout.LayoutParams.MATCH_PARENT;
+
+            setTextAlignment(snackbar);
 
             setColor(colorCode);
         }
