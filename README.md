@@ -10,6 +10,8 @@ This library contain following functions,
 * Snackbar - custom contentview
 * Snackbar - binding views
 * Snackbar - custom message
+* Snackbar - alignment
+* Snackbar - fillParent
 
 ####Let's take a look how to add this to your project
 
@@ -24,7 +26,7 @@ repositories {
 
 dependencies {
     ...
-    compile 'com.chootdev:csnackbar:1.3.2'
+    compile 'com.chootdev:csnackbar:1.4.0'
 }
 ```
 
@@ -35,7 +37,7 @@ Maven
 <dependency>
   <groupId>com.chootdev</groupId>
   <artifactId>csnackbar</artifactId>
-  <version>1.3.2</version>
+  <version>1.4.0</version>
   <type>pom</type>
 </dependency>
 ```
@@ -50,6 +52,8 @@ Snackbar.with(this,null)
         .type(Type.SUCCESS)
         .message("Profile updated successfully!")
         .duration(Duration.SHORT)
+        .fillParent(true)
+        .textAlign(Align.LEFT)
         .show();
 ```
 
@@ -62,6 +66,17 @@ Type.WARNING  // Orange color alert to show alert type functions
 
 Type.CUSTOM   // This can use to set custom color as background
 ```
+
+If you need to change Text alignment, you can use
+```java
+Align.RIGHT   // align right
+Align.LEFT    // align left
+Align.CENTER  // align center
+```
+
+You can use ```fillParent``` to match full width, when using Snackbar on Tablet devices 
+![ezgif com-video-to-gif](https://user-images.githubusercontent.com/13764097/38407266-7133d9fe-3996-11e8-98a0-7a77475af644.gif)
+
 
 Let's take a look, how to set custom color as background
 ```java
@@ -112,6 +127,9 @@ Output Generated
 
 Changelog
 ---------
+* **1.4.0**
+    * Add fill Snacbar view to full width. You can use "fillParent"
+    * Text alignment added with "textAlign" and "Align" enum
 * **1.3.2**
     * Fixed issue with Duration.Long (Thanks [Manuel González Villegas](https://github.com/manuelgon47))
 * **1.3.1**
