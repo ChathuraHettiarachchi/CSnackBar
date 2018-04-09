@@ -13,7 +13,7 @@ ext {
     siteUrl = 'https://github.com/ChathuraHettiarachchi/CSnackBar'
     gitUrl = 'https://github.com/ChathuraHettiarachchi/CSnackBar.git'
 
-    libraryVersion = '1.4.0'
+    libraryVersion = '1.4.2'
 
     developerId = 'ChathuraHettiarachchi'
     developerName = 'Chathura Hettiarachchi'

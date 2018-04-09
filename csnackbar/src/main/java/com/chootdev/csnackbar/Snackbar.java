@@ -6,6 +6,9 @@ import android.os.Build;
 import android.support.design.widget.AppBarLayout;
 import android.view.Gravity;
 import android.view.View;
+import android.view.ViewGroup;
+import android.view.Window;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 /**
@@ -128,27 +131,31 @@ public class Snackbar {
     private static void setTextAlignment(android.support.design.widget.Snackbar snackbar) {
         TextView textView = (TextView) snackbar.getView().findViewById(android.support.design.R.id.snackbar_text);
 
+        LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) textView.getLayoutParams();
+        params.width = ViewGroup.LayoutParams.MATCH_PARENT;
+        textView.setLayoutParams(params);
+
         switch (textAlign) {
             case CENTER:
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M)
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1)
                     textView.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
                 else
                     textView.setGravity(Gravity.CENTER_HORIZONTAL);
                 break;
             case RIGHT:
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M)
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1)
                     textView.setTextAlignment(View.TEXT_ALIGNMENT_VIEW_END);
                 else
                     textView.setGravity(Gravity.RIGHT);
                 break;
             case LEFT:
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M)
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1)
                     textView.setTextAlignment(View.TEXT_ALIGNMENT_VIEW_START);
                 else
                     textView.setGravity(Gravity.LEFT);
                 break;
             default:
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M)
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1)
                     textView.setTextAlignment(View.TEXT_ALIGNMENT_VIEW_START);
                 else
                     textView.setGravity(Gravity.LEFT);
