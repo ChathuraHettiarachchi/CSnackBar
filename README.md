@@ -10,7 +10,7 @@ This library contain following functions,
 * Snackbar - custom contentview
 * Snackbar - binding views
 * Snackbar - custom message
-* Snackbar - alignment
+* Snackbar - alignment (Text Align feature will support only after API 17)
 * Snackbar - fillParent
 
 ####Let's take a look how to add this to your project
@@ -26,7 +26,7 @@ repositories {
 
 dependencies {
     ...
-    compile 'com.chootdev:csnackbar:1.4.1'
+    compile 'com.chootdev:csnackbar:1.4.2'
 }
 ```
 
@@ -37,7 +37,7 @@ Maven
 <dependency>
   <groupId>com.chootdev</groupId>
   <artifactId>csnackbar</artifactId>
-  <version>1.4.1</version>
+  <version>1.4.2</version>
   <type>pom</type>
 </dependency>
 ```
@@ -120,6 +120,7 @@ TextView tv = (TextView) view.findViewById(R.id.sample);
 Limitations
 -----------
 * Currently min SDK is set to 16
+* Text Align feature will support only after API 17
 
 Output Generated
 ----------------
@@ -127,7 +128,7 @@ Output Generated
 
 Changelog
 ---------
-* **1.4.1**
+* **1.4.1/1.4.2**
     * Fixed Align.CENTER issue on Android devices below Android.M
 * **1.4.0**
     * Add fill Snacbar view to full width. You can use "fillParent"
