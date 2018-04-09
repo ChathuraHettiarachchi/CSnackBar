@@ -26,7 +26,7 @@ repositories {
 
 dependencies {
     ...
-    compile 'com.chootdev:csnackbar:1.4.0'
+    compile 'com.chootdev:csnackbar:1.4.1'
 }
 ```
 
@@ -37,7 +37,7 @@ Maven
 <dependency>
   <groupId>com.chootdev</groupId>
   <artifactId>csnackbar</artifactId>
-  <version>1.4.0</version>
+  <version>1.4.1</version>
   <type>pom</type>
 </dependency>
 ```
@@ -127,6 +127,8 @@ Output Generated
 
 Changelog
 ---------
+* **1.4.1**
+    * Fixed Align.CENTER issue on Android devices below Android.M
 * **1.4.0**
     * Add fill Snacbar view to full width. You can use "fillParent"
     * Text alignment added with "textAlign" and "Align" enum
