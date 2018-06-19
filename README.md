@@ -110,6 +110,8 @@ Snackbar.with(this,null)
 ```
 When you are using custom view, you can/need to, change any view's settings before you set it as custom view to the Snackbar.
 
+Currently there is a limitation. Custom layout need to contain parent layout as a RelativeLayout, then it will fill the parent. If you need to align text in the custom layout, you need to do that change in the custom layout itself.
+
 i.e :
 ```java
 View view = getLayoutInflater().inflate(R.layout.custom_view, null);
