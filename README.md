@@ -123,6 +123,7 @@ Limitations
 -----------
 * Currently min SDK is set to 16
 * Text Align feature will support only after API 17
+* Currently there is a limitation. Custom layout need to contain parent layout as a RelativeLayout, then it will fill the parent. If you need to align text in the custom layout, you need to do that change in the custom layout itself.
 
 Output Generated
 ----------------
