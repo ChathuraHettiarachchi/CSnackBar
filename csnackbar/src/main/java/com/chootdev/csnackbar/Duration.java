@@ -1,6 +1,6 @@
 package com.chootdev.csnackbar;
 
-import android.support.design.widget.Snackbar;
+import com.google.android.material.snackbar.Snackbar;
 
 /**
  * Created by Choota on 1/25/17.
