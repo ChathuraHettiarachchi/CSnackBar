@@ -3,7 +3,7 @@ package com.chootdev.csnackbar;
 import android.app.Activity;
 import android.content.Context;
 import android.os.Build;
-import android.support.design.widget.AppBarLayout;
+import com.google.android.material.appbar.AppBarLayout;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,10 +15,12 @@ import android.widget.TextView;
  * Created by Choota on 1/25/17.
  */
 
+/*Updated to AndroidX*/
+
 public class Snackbar {
     // main context items
     private static Context snackContext;
-    private static android.support.design.widget.Snackbar snackbar;
+    private static com.google.android.material.snackbar.Snackbar snackbar;
     private static Snackbar singleton;
 
     // variables
@@ -39,11 +41,11 @@ public class Snackbar {
         if (fab == null) {
             View rootView = ((Activity) context).getWindow().getDecorView().findViewById(android.R.id.content);
             view = rootView;
-            snackbar = android.support.design.widget.Snackbar
+            snackbar = com.google.android.material.snackbar.Snackbar
                     .make(view, "", snackDuration);
         } else {
             view = fab;
-            snackbar = android.support.design.widget.Snackbar
+            snackbar = com.google.android.material.snackbar.Snackbar
                     .make(view, "", snackDuration);
         }
 
@@ -89,13 +91,13 @@ public class Snackbar {
     public static Snackbar contentView(final View view, int heightInDp) {
         isCustomView = true;
 
-        final android.support.design.widget.Snackbar.SnackbarLayout snackLayout = (android.support.design.widget.Snackbar.SnackbarLayout) snackbar.getView();
-        android.support.design.widget.Snackbar.SnackbarLayout.LayoutParams params =
-                (android.support.design.widget.Snackbar.SnackbarLayout.LayoutParams) snackLayout.getLayoutParams();
+        final com.google.android.material.snackbar.Snackbar.SnackbarLayout snackLayout = (com.google.android.material.snackbar.Snackbar.SnackbarLayout) snackbar.getView();
+        com.google.android.material.snackbar.Snackbar.SnackbarLayout.LayoutParams params =
+                (com.google.android.material.snackbar.Snackbar.SnackbarLayout.LayoutParams) snackLayout.getLayoutParams();
 
         params.height = (int) pxFromDp(heightInDp);
 
-        TextView textView = (TextView) snackLayout.findViewById(android.support.design.R.id.snackbar_text);
+        TextView textView = (TextView) snackLayout.findViewById(com.google.android.material.R.id.snackbar_text);
         textView.setVisibility(View.INVISIBLE);
 
         snackLayout.addView(view, 0, params);
@@ -128,8 +130,8 @@ public class Snackbar {
         return singleton;
     }
 
-    private static void setTextAlignment(android.support.design.widget.Snackbar snackbar) {
-        TextView textView = (TextView) snackbar.getView().findViewById(android.support.design.R.id.snackbar_text);
+    private static void setTextAlignment(com.google.android.material.snackbar.Snackbar snackbar) {
+        TextView textView = (TextView) snackbar.getView().findViewById(com.google.android.material.R.id.snackbar_text);
 
         LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) textView.getLayoutParams();
         params.width = ViewGroup.LayoutParams.MATCH_PARENT;
@@ -168,7 +170,7 @@ public class Snackbar {
             snackbar.setDuration(snackDuration);
             snackbar.show();
         } else {
-            snackbar = android.support.design.widget.Snackbar
+            snackbar = com.google.android.material.snackbar.Snackbar
                     .make(view, snackMessage, snackDuration)
                     .setDuration(snackDuration);
 
@@ -180,7 +182,7 @@ public class Snackbar {
             setColor(colorCode);
 
             View snackbarView = snackbar.getView();
-            TextView textView = (TextView) snackbarView.findViewById(android.support.design.R.id.snackbar_text);
+            TextView textView = (TextView) snackbarView.findViewById(com.google.android.material.R.id.snackbar_text);
             textView.setMaxLines(10);
         }
         snackbar.show();
